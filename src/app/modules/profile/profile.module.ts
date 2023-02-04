@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { ProfileRoutingModule } from './profile-routing.module';
 import { MyProfileComponent } from './my-profile/my-profile.component';
 import { PasswordResetComponent } from './password-reset/password-reset.component';
 import { UserManagementComponent } from './user-management/user-management.component';
 import { ReportsComponent } from './reports/reports.component';
+import { SystemLogReportComponent } from './system-log-report/system-log-report.component';
 
 
 @NgModule({
@@ -13,7 +13,8 @@ import { ReportsComponent } from './reports/reports.component';
     MyProfileComponent,
     PasswordResetComponent,
     UserManagementComponent,
-    ReportsComponent
+    ReportsComponent,
+    SystemLogReportComponent
   ],
   imports: [
     CommonModule,

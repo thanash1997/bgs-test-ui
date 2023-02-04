@@ -4,13 +4,21 @@ import { AppAdminLayoutComponent  } from './layout/app-admin-layout/app-admin-la
 import { AuthLayoutComponent } from './layout/auth-layout/auth-layout.component';
 import { MyProfileComponent } from './modules/profile/my-profile/my-profile.component';
 import { LoginComponent } from './pages/login/login.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 const routes: Routes = [
+  // {
+  //   path: 'my-profile',
+  //   component: AppAdminLayoutComponent,
+  //   children: [
+  //     { path: '', component: MyProfileComponent },
+  //   ]
+  // },
   {
-    path: 'my-profile',
+    path: 'dashboard',
     component: AppAdminLayoutComponent,
     children: [
-      { path: '', component: MyProfileComponent },
+      { path: '', component: DashboardComponent },
     ]
   },
   {
