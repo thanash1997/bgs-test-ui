@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule }   from '@angular/forms';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { ProfileModule } from './modules/profile/profile.module';
@@ -13,6 +15,8 @@ import { LoginComponent } from './pages/login/login.component';
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { ProfileLayoutComponent } from './layout/profile-layout/profile-layout.component';
+import {  BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -26,12 +30,16 @@ import { ProfileLayoutComponent } from './layout/profile-layout/profile-layout.c
     LoginComponent,
     ForgotPasswordComponent,
     DashboardComponent,
-    ProfileLayoutComponent
+    ProfileLayoutComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ProfileModule,
+    FormsModule,
+    BsDatepickerModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

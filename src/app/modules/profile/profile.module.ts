@@ -6,7 +6,7 @@ import { PasswordResetComponent } from './password-reset/password-reset.componen
 import { UserManagementComponent } from './user-management/user-management.component';
 import { ReportsComponent } from './reports/reports.component';
 import { SystemLogReportComponent } from './system-log-report/system-log-report.component';
-
+import {  BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,8 @@ import { SystemLogReportComponent } from './system-log-report/system-log-report.
   ],
   imports: [
     CommonModule,
-    ProfileRoutingModule
+    ProfileRoutingModule,
+    BsDatepickerModule.forRoot(),
   ]
 })
 export class ProfileModule { }

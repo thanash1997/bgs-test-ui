@@ -1,1 +1,81 @@
-<p>user-management works!</p>
+<div class="col-inner w-100">
+    <div class="row mb-3">
+        <div class="col-md-2">
+            <h5 class="page-title">User Management</h5>
+        </div>
+        <div class="col-md-3">
+            <div class="membersearch ml-12">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                    <span class="input-group-text" id="memb-search">
+                        <img src="../../../../assets/img/general/search.svg" alt=""/>
+                    </span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Search Users..." aria-label="Search users.." aria-describedby="memb-search">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-7">
+            <div class="member_filter filter_bar d-flex align-items-center justify-content-end">
+                <a routerLink="" class="ml-12 viewpending color-9f mr-4"><u>Edit Roles</u></a>              
+                <a routerLink="/members/add" class="btn table-btn"><img class="mr-2" src="../../../../assets/img/general/add_icon.png" alt="">Create New User</a>
+            </div>
+        </div>
+  </div>
+    <!-- <a><img src="../../../../assets/img/general/cnewuser.png" alt="create-newuser"></a> -->
+    <div class="card border-0 box-shadow">
+        <div class="card-body pt-0">
+            <div class="row">
+                <table class="table table-custom">
+                    <thead>
+                        <tr>
+                            <th>USERNAME</th>
+                            <th>FIRST NAME</th>
+                            <th>LAST NAME</th>
+                            <th>TEAM</th>
+                            <th>ROLE</th>                            
+                            <!-- <th class="text-center">STATUS</th> -->
+                            <th class="text-center" width="3%"></th>
+                        </tr>
+                    </thead>
+                    <tbody> 
+                      <tr>
+                        <td>Testing</td>
+                        <td>Testing</td>
+                        <td>Testing</td>
+                        <td>Testing</td>
+                        <td>Testing</td>                       
+                        <td class="text-center" dropdown>
+                            <div class="dropdown dropleft">                              
+                                <img class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="../../../../assets/img/general/table-action.png ">
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                  <a class="dropdown-item" href="#">View User</a>
+                                  <a class="dropdown-item" href="#">Edit User</a>                                 
+                                </div>
+                              </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Testing</td>
+                        <td>Testing</td>
+                        <td>Testing</td>
+                        <td>Testing</td>
+                        <td>Testing</td>                       
+                        <td class="text-center" dropdown>
+                            <div class="dropdown dropleft">                              
+                                <img class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="../../../../assets/img/general/table-action.png ">
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                  <a class="dropdown-item" href="#">View User</a>
+                                  <a class="dropdown-item" href="#">Edit User</a>                                 
+                                </div>
+                              </div>
+                        </td>
+                      </tr>
+                       
+                       
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
