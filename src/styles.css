@@ -186,10 +186,10 @@
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
-  font-size: var(--bs-body-font-size);
+  /* font-size: var(--bs-body-font-size);
   font-weight: var(--bs-body-font-weight);
-  line-height: var(--bs-body-line-height);
-  /* color: var(--bs-body-color); */
+  line-height: var(--bs-body-line-height); */
+  color: #5C6165;
   text-align: var(--bs-body-text-align);
   background-color: var(--bs-body-bg);
   -webkit-text-size-adjust: 100%;
@@ -210,7 +210,7 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   margin-bottom: 0.5rem;
   font-weight: 600;
   line-height: 1.2;
-  /* color: var(--bs-heading-color, inherit); */
+ 
 }
 
 h1, .h1 {
@@ -250,7 +250,7 @@ h5, .h5 {
 }
 
 h6, .h6 {
-  font-size: 1.075rem;
+  font-size: 16px;
 }
 
 p {
@@ -618,6 +618,10 @@ border-radius: 6px 6px 0px 0px;
 .table thead th{
   border-bottom: 0;
   border-top: 0;
+  font-size: 14px;
+}
+.table{
+  background-color: #ffffff;
 }
 .table-custom thead tr th:first-child {
   border-radius: 6px 0px 0px 0px;
@@ -660,4 +664,16 @@ span#memb-search img {
 ::-ms-input-placeholder { /* Microsoft Edge */
   color: #9f9f9f62 !important;
   opacity: .5;
+}
+.text-20{
+  font-size: 18px;
+}
+.member_filter .btn, .status_by {
+  background: #f0f0f0;
+  color: #c7c7c7;
+  border-radius: 4px;
+  font-size: 12px;
+}
+ul li {
+  list-style: none;
 }
