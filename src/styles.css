@@ -677,3 +677,62 @@ span#memb-search img {
 ul li {
   list-style: none;
 }
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl{
+  padding-left: 80px;
+  padding-right: 80px;
+}
+#profileSidemenu ul.navbar-nav li a.active {
+  border-right: 5px solid #F6C35A;
+  color: #F6C35A;
+}
+#profileSidemenu ul.navbar-nav li {
+  margin-right: 0;
+}
+.rightside-menu .dropdown-toggle::after{
+  background-image: url('../src/assets/img/general/left-arrow.png');
+  width: 23px;
+  height: 14px;
+  border: none;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  margin-left: 11px;
+  background-size: 70%;
+}
+.dropdown-menu.dropdown-menu-right.show {
+  width: 250px;
+  padding:0;
+  border:none;
+  box-shadow: 6px 6px 16px #0000000f;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.prf-bg{
+  background-color: #F6C35A;
+  padding: 10px;
+  border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.dropdown-item.active, .dropdown-item:active{
+  background-color: #900;
+}
+.dropdown-item, .dropdown-item {
+  padding: 8px;
+  font-size: 14px;
+}
+.dropdown-item{
+  color:#9F9F9F;
+  padding: 10px 20px;
+
+}
+.dropdown-item.active,
+ .dropdown-item:active, 
+ .dropdown-item:hover {
+  background-color: #fdf4e8;
+  color: #9F9F9F;
+}
+.font-bold{
+  font-weight: 700;
+}
+.line-height-normal{
+  line-height: normal;
+}

@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./my-profile.component.css']
 })
 export class MyProfileComponent implements OnInit {
-
+  choosedimg:any;
   constructor() { }
 
   ngOnInit(): void {
+  }
+  onFileChanged(event:any){
+
   }
 
 }

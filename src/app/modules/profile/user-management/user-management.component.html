@@ -1,21 +1,26 @@
 <div class="col-inner w-100">
     <div class="row mb-3">
-        <div class="col-md-2">
-            <h5 class="page-title">User Management</h5>
-        </div>
-        <div class="col-md-3">
-            <div class="membersearch ml-12">
-                <div class="input-group">
-                    <div class="input-group-prepend">
-                    <span class="input-group-text" id="memb-search">
-                        <img src="../../../../assets/img/general/search.svg" alt=""/>
-                    </span>
+        <div class="col-md-6 ">
+            <ul class="d-flex pl-0">
+                <li class="mr-3">
+                    <h5 class="page-title mt-2">User Management</h5>
+                </li>
+                <li>
+                    <div class="membersearch ml-12">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                            <span class="input-group-text" id="memb-search">
+                                <img src="../../../../assets/img/general/search.svg" alt=""/>
+                            </span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Search Users..." aria-label="Search users.." aria-describedby="memb-search">
+                        </div>
                     </div>
-                    <input type="text" class="form-control" placeholder="Search Users..." aria-label="Search users.." aria-describedby="memb-search">
-                </div>
-            </div>
+                </li>
+            </ul>
+            
         </div>
-        <div class="col-md-7">
+        <div class="col-md-6">
             <div class="member_filter filter_bar d-flex align-items-center justify-content-end">
                 <a routerLink="" class="ml-12 viewpending color-9f mr-4 font-12"><u>Edit Roles</u></a>              
                 <a routerLink="/members/add" class="btn table-btn"><img class="mr-2" src="../../../../assets/img/general/add_icon.png" alt="">Create New User</a>
