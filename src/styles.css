@@ -719,6 +719,20 @@ ul li {
   padding: 8px;
   font-size: 14px;
 }
+.input-group-prepend {
+  background: transparent;
+}
+
+.input-group-prepend .input-group-text {
+  background: transparent;
+  border-right: 0;
+}
+
+.input-group-prepend ~ input, .input-group-prepend ~ select {
+  border-left: 0;
+  padding-left: 0;
+}
+
 .dropdown-item{
   color:#9F9F9F;
   padding: 10px 20px;
