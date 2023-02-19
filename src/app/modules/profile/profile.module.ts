@@ -7,6 +7,8 @@ import { UserManagementComponent } from './user-management/user-management.compo
 import { ReportsComponent } from './reports/reports.component';
 import { SystemLogReportComponent } from './system-log-report/system-log-report.component';
 import {  BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { DataTablesModule } from 'angular-datatables';
+import { RoleEditorComponent } from './role-editor/role-editor.component';
 
 @NgModule({
   declarations: [
@@ -14,12 +16,14 @@ import {  BsDatepickerModule } from 'ngx-bootstrap/datepicker';
     PasswordResetComponent,
     UserManagementComponent,
     ReportsComponent,
-    SystemLogReportComponent
+    SystemLogReportComponent,
+    RoleEditorComponent
   ],
   imports: [
     CommonModule,
     ProfileRoutingModule,
     BsDatepickerModule.forRoot(),
+    DataTablesModule
   ]
 })
 export class ProfileModule { }

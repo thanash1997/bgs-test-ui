@@ -6,6 +6,7 @@ import { PasswordResetComponent } from './password-reset/password-reset.componen
 import { UserManagementComponent } from './user-management/user-management.component';
 import { ReportsComponent } from './reports/reports.component';
 import { SystemLogReportComponent } from './system-log-report/system-log-report.component';
+import { RoleEditorComponent } from './role-editor/role-editor.component';
 
 const routes: Routes = [
   { 
@@ -17,6 +18,7 @@ const routes: Routes = [
       { path: "user-management", component: UserManagementComponent, pathMatch: 'full'},
       { path: "reports", component: ReportsComponent, pathMatch: 'full'},
       { path: "system-log-reports", component: SystemLogReportComponent, pathMatch: 'full'},
+      { path: "role-permission", component: RoleEditorComponent, pathMatch: 'full'},
     ],
     //canActivate: [AuthguardGuard]
   }

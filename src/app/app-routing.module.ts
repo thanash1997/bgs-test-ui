@@ -5,6 +5,8 @@ import { AuthLayoutComponent } from './layout/auth-layout/auth-layout.component'
 import { MyProfileComponent } from './modules/profile/my-profile/my-profile.component';
 import { LoginComponent } from './pages/login/login.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { CheckdatabaseComponent } from './pages/checkdatabase/checkdatabase.component';
+import { ContactlistComponent } from './pages/contactlist/contactlist.component';
 
 const routes: Routes = [
   // {
@@ -19,6 +21,20 @@ const routes: Routes = [
     component: AppAdminLayoutComponent,
     children: [
       { path: '', component: DashboardComponent },
+    ]
+  },
+  {
+    path: 'check-database',
+    component: AppAdminLayoutComponent,
+    children: [
+      { path: '', component: CheckdatabaseComponent },
+    ]
+  },
+  {
+    path: 'contact-list',
+    component: AppAdminLayoutComponent,
+    children: [
+      { path: '', component: ContactlistComponent },
     ]
   },
   {

@@ -1,0 +1,327 @@
+
+<div class="container-fluid pt-3 pb-5">
+    <div class="col-inner w-100">
+        <h5 class="page-title mb-4">Contact List</h5>
+        <div class="row mb-3">
+    
+            <div class="col-md-12">
+                <p>Total Number of Contacts In Database: <span>495</span></p>
+                <ul class="pl-0 d-flex mb-0">
+                    <li class="mr-2">
+                        <div class="membersearch ml-12">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="memb-search">
+                                    <img src="../../../../assets/img/general/search.svg" alt=""/>
+                                </span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Search Users..." aria-label="Search users.." aria-describedby="memb-search">
+                        </div>
+                    </div>
+                </li>
+                    <li class="mr-2">
+                        <div class="d-flex justify-content-end ">
+                            <div class="dropdown-list" dropdown>
+                                <button class="btn status_by bg-white p-2" dropdownToggle><img src="../../../../assets/img/general/datepicker.svg" alt="upload"/> Client </button>
+                                <div *dropdownMenu class="action_list dropdown-menu dropdown-caldendar">
+                                </div>
+                            </div>
+                           
+                        </div>
+                    </li>
+                    <li class="mr-2"> 
+                        <div class="d-flex justify-content-end ">
+                            <div class="dropdown-list" dropdown>
+                                <button class="btn status_by bg-white p-2" dropdownToggle><img src="../../../../assets/img/general/briefcase.svg" alt="upload"/> Any Date</button>
+                                <div *dropdownMenu class="action_list dropdown-menu dropdown-caldendar">
+                                </div>
+                            </div>
+                           
+                        </div>
+                    </li>
+                    
+                </ul>
+            </div>
+            <div class="col-md-4">
+                
+            </div>     
+      </div>
+        <!-- <a><img src="../../../../assets/img/general/cnewuser.png" alt="create-newuser"></a> -->
+        <div class=" border-0">
+            <div class="pl-3 pr-3 pt-0">
+                <div class="row">
+                    <div class="col-md-12 pl-0 pr-0">
+                        <table datatable  datatable [dtOptions]="dtOptions" class="table table-custom mb-0">
+                            <thead>
+                                <tr>
+                                    <th>CONTACT NAME</th>
+                                    <th>CONTACT NUMBER</th>
+                                    <th>COMPANY / BRANCH</th>
+                                    <th>DEPARTMENT</th>                           
+                                    <th>DATE ADDED</th>      
+                                    <th></th>                     
+                                </tr>
+                            </thead>
+                            <tbody> 
+                              <tr>
+                                <td>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="43" height="43" viewBox="0 0 43 43">
+                                        <g id="Group_365" data-name="Group 365" transform="translate(-88 -416)">
+                                          <g id="Ellipse_69" data-name="Ellipse 69" transform="translate(88 416)" fill="#787878" stroke="#707070" stroke-width="1">
+                                            <circle cx="21.5" cy="21.5" r="21.5" stroke="none"/>
+                                            <circle cx="21.5" cy="21.5" r="21" fill="none"/>
+                                          </g>
+                                          <g id="user_9_" data-name="user (9)" transform="translate(97.844 423.065)">
+                                            <path id="Path_463" data-name="Path 463" d="M93.762,13.46a6.512,6.512,0,0,0,4.758-1.972,6.511,6.511,0,0,0,1.971-4.758A6.513,6.513,0,0,0,98.52,1.971a6.728,6.728,0,0,0-9.517,0A6.512,6.512,0,0,0,87.032,6.73,6.512,6.512,0,0,0,89,11.488,6.513,6.513,0,0,0,93.762,13.46Zm0,0" transform="translate(-82.282 0)" fill="#fff"/>
+                                            <path id="Path_464" data-name="Path 464" d="M23.255,255.3a16.623,16.623,0,0,0-.226-1.766,13.906,13.906,0,0,0-.434-1.775,8.767,8.767,0,0,0-.73-1.656,6.248,6.248,0,0,0-1.1-1.434,4.851,4.851,0,0,0-1.581-.993,5.462,5.462,0,0,0-2.018-.365,2.048,2.048,0,0,0-1.094.464c-.328.214-.711.461-1.139.735a6.529,6.529,0,0,1-1.474.65,5.725,5.725,0,0,1-3.606,0,6.516,6.516,0,0,1-1.473-.649c-.424-.271-.808-.518-1.14-.735a2.045,2.045,0,0,0-1.093-.464,5.456,5.456,0,0,0-2.018.366,4.847,4.847,0,0,0-1.581.993,6.248,6.248,0,0,0-1.1,1.434,8.785,8.785,0,0,0-.73,1.656,13.944,13.944,0,0,0-.434,1.775,16.564,16.564,0,0,0-.226,1.766C.019,255.84,0,256.4,0,256.956a4.64,4.64,0,0,0,1.378,3.51,4.961,4.961,0,0,0,3.551,1.3H18.382a4.959,4.959,0,0,0,3.551-1.3,4.638,4.638,0,0,0,1.378-3.51c0-.563-.019-1.118-.056-1.65Zm0,0" transform="translate(0 -233.82)" fill="#fff"/>
+                                          </g>
+                                        </g>
+                                      </svg> Jimmy Tay Boon Han
+                                </td>
+                                <td>+6012 222 4999</td>
+                                <td>CIMB Bank - Taman Mutiara</td>
+                                <td>Human Resources</td>
+                                <td>05-03-2022, 03:32 pm</td>
+                                <td class="text-center" dropdown>
+                                    <div class="dropdown dropleft">                              
+                                        <img class="dropdown-toggle" style="width:5px" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="../../../../assets/img/general/table-action.png ">
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                          <a class="dropdown-item" href="#">View User</a>
+                                          <a class="dropdown-item" href="#">Edit User</a>                                 
+                                        </div>
+                                      </div>
+                                </td>       
+                              </tr>
+                                                            <tr>
+                                <td>Jimmy Tay Boon Han</td>
+                                <td>+6012 222 4999</td>
+                                <td>CIMB Bank - Taman Mutiara</td>
+                                <td>Human Resources</td>
+                                <td>05-03-2022, 03:32 pm</td>
+                                <td class="text-center" dropdown>
+                                    <div class="dropdown dropleft">                              
+                                        <img class="dropdown-toggle" style="width:5px" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="../../../../assets/img/general/table-action.png ">
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                          <a class="dropdown-item" href="#">View User</a>
+                                          <a class="dropdown-item" href="#">Edit User</a>                                 
+                                        </div>
+                                      </div>
+                                </td>       
+                              </tr>
+                                                            <tr>
+                                <td>Jimmy Tay Boon Han</td>
+                                <td>+6012 222 4999</td>
+                                <td>CIMB Bank - Taman Mutiara</td>
+                                <td>Human Resources</td>
+                                <td>05-03-2022, 03:32 pm</td>
+                                <td class="text-center" dropdown>
+                                    <div class="dropdown dropleft">                              
+                                        <img class="dropdown-toggle" style="width:5px" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="../../../../assets/img/general/table-action.png ">
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                          <a class="dropdown-item" href="#">View User</a>
+                                          <a class="dropdown-item" href="#">Edit User</a>                                 
+                                        </div>
+                                      </div>
+                                </td>       
+                              </tr>
+                                                            <tr>
+                                <td>Jimmy Tay Boon Han</td>
+                                <td>+6012 222 4999</td>
+                                <td>CIMB Bank - Taman Mutiara</td>
+                                <td>Human Resources</td>
+                                <td>05-03-2022, 03:32 pm</td>
+                                <td class="text-center" dropdown>
+                                    <div class="dropdown dropleft">                              
+                                        <img class="dropdown-toggle" style="width:5px" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="../../../../assets/img/general/table-action.png ">
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                          <a class="dropdown-item" href="#">View User</a>
+                                          <a class="dropdown-item" href="#">Edit User</a>                                 
+                                        </div>
+                                      </div>
+                                </td>       
+                              </tr>
+                                                            <tr>
+                                <td>Jimmy Tay Boon Han</td>
+                                <td>+6012 222 4999</td>
+                                <td>CIMB Bank - Taman Mutiara</td>
+                                <td>Human Resources</td>
+                                <td>05-03-2022, 03:32 pm</td>
+                                <td class="text-center" dropdown>
+                                    <div class="dropdown dropleft">                              
+                                        <img class="dropdown-toggle" style="width:5px" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="../../../../assets/img/general/table-action.png ">
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                          <a class="dropdown-item" href="#">View User</a>
+                                          <a class="dropdown-item" href="#">Edit User</a>                                 
+                                        </div>
+                                      </div>
+                                </td>       
+                              </tr>
+                                                            <tr>
+                                <td>Jimmy Tay Boon Han</td>
+                                <td>+6012 222 4999</td>
+                                <td>CIMB Bank - Taman Mutiara</td>
+                                <td>Human Resources</td>
+                                <td>05-03-2022, 03:32 pm</td>
+                                <td class="text-center" dropdown>
+                                    <div class="dropdown dropleft">                              
+                                        <img class="dropdown-toggle" style="width:5px" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="../../../../assets/img/general/table-action.png ">
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                          <a class="dropdown-item" href="#">View User</a>
+                                          <a class="dropdown-item" href="#">Edit User</a>                                 
+                                        </div>
+                                      </div>
+                                </td>       
+                              </tr>
+                                                            <tr>
+                                <td>Jimmy Tay Boon Han</td>
+                                <td>+6012 222 4999</td>
+                                <td>CIMB Bank - Taman Mutiara</td>
+                                <td>Human Resources</td>
+                                <td>05-03-2022, 03:32 pm</td>
+                                <td class="text-center" dropdown>
+                                    <div class="dropdown dropleft">                              
+                                        <img class="dropdown-toggle" style="width:5px" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="../../../../assets/img/general/table-action.png ">
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                          <a class="dropdown-item" href="#">View User</a>
+                                          <a class="dropdown-item" href="#">Edit User</a>                                 
+                                        </div>
+                                      </div>
+                                </td>       
+                              </tr>
+                                                            <tr>
+                                <td>Jimmy Tay Boon Han</td>
+                                <td>+6012 222 4999</td>
+                                <td>CIMB Bank - Taman Mutiara</td>
+                                <td>Human Resources</td>
+                                <td>05-03-2022, 03:32 pm</td>
+                                <td class="text-center" dropdown>
+                                    <div class="dropdown dropleft">                              
+                                        <img class="dropdown-toggle" style="width:5px" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="../../../../assets/img/general/table-action.png ">
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                          <a class="dropdown-item" href="#">View User</a>
+                                          <a class="dropdown-item" href="#">Edit User</a>                                 
+                                        </div>
+                                      </div>
+                                </td>       
+                              </tr>
+                                                            <tr>
+                                <td>Jimmy Tay Boon Han</td>
+                                <td>+6012 222 4999</td>
+                                <td>CIMB Bank - Taman Mutiara</td>
+                                <td>Human Resources</td>
+                                <td>05-03-2022, 03:32 pm</td>
+                                <td class="text-center" dropdown>
+                                    <div class="dropdown dropleft">                              
+                                        <img class="dropdown-toggle" style="width:5px" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="../../../../assets/img/general/table-action.png ">
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                          <a class="dropdown-item" href="#">View User</a>
+                                          <a class="dropdown-item" href="#">Edit User</a>                                 
+                                        </div>
+                                      </div>
+                                </td>       
+                              </tr>
+                                                            <tr>
+                                <td>Jimmy Tay Boon Han</td>
+                                <td>+6012 222 4999</td>
+                                <td>CIMB Bank - Taman Mutiara</td>
+                                <td>Human Resources</td>
+                                <td>05-03-2022, 03:32 pm</td>
+                                <td class="text-center" dropdown>
+                                    <div class="dropdown dropleft">                              
+                                        <img class="dropdown-toggle" style="width:5px" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="../../../../assets/img/general/table-action.png ">
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                          <a class="dropdown-item" href="#">View User</a>
+                                          <a class="dropdown-item" href="#">Edit User</a>                                 
+                                        </div>
+                                      </div>
+                                </td>       
+                              </tr>
+                                                            <tr>
+                                <td>Jimmy Tay Boon Han</td>
+                                <td>+6012 222 4999</td>
+                                <td>CIMB Bank - Taman Mutiara</td>
+                                <td>Human Resources</td>
+                                <td>05-03-2022, 03:32 pm</td>
+                                <td class="text-center" dropdown>
+                                    <div class="dropdown dropleft">                              
+                                        <img class="dropdown-toggle" style="width:5px" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="../../../../assets/img/general/table-action.png ">
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                          <a class="dropdown-item" href="#">View User</a>
+                                          <a class="dropdown-item" href="#">Edit User</a>                                 
+                                        </div>
+                                      </div>
+                                </td>       
+                              </tr>
+                                                            <tr>
+                                <td>Jimmy Tay Boon Han</td>
+                                <td>+6012 222 4999</td>
+                                <td>CIMB Bank - Taman Mutiara</td>
+                                <td>Human Resources</td>
+                                <td>05-03-2022, 03:32 pm</td>
+                                <td class="text-center" dropdown>
+                                    <div class="dropdown dropleft">                              
+                                        <img class="dropdown-toggle" style="width:5px" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="../../../../assets/img/general/table-action.png ">
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                          <a class="dropdown-item" href="#">View User</a>
+                                          <a class="dropdown-item" href="#">Edit User</a>                                 
+                                        </div>
+                                      </div>
+                                </td>       
+                              </tr>
+                                                            <tr>
+                                <td>Jimmy Tay Boon Han</td>
+                                <td>+6012 222 4999</td>
+                                <td>CIMB Bank - Taman Mutiara</td>
+                                <td>Human Resources</td>
+                                <td>05-03-2022, 03:32 pm</td>
+                                <td class="text-center" dropdown>
+                                    <div class="dropdown dropleft">                              
+                                        <img class="dropdown-toggle" style="width:5px" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="../../../../assets/img/general/table-action.png ">
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                          <a class="dropdown-item" href="#">View User</a>
+                                          <a class="dropdown-item" href="#">Edit User</a>                                 
+                                        </div>
+                                      </div>
+                                </td>       
+                              </tr>
+                                                            <tr>
+                                <td>Jimmy Tay Boon Han</td>
+                                <td>+6012 222 4999</td>
+                                <td>CIMB Bank - Taman Mutiara</td>
+                                <td>Human Resources</td>
+                                <td>05-03-2022, 03:32 pm</td>
+                                <td class="text-center" dropdown>
+                                    <div class="dropdown dropleft">                              
+                                        <img class="dropdown-toggle" style="width:5px" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="../../../../assets/img/general/table-action.png ">
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                          <a class="dropdown-item" href="#">View User</a>
+                                          <a class="dropdown-item" href="#">Edit User</a>                                 
+                                        </div>
+                                      </div>
+                                </td>       
+                              </tr>
+                                                            <tr>
+                                <td>Jimmy Tay Boon Han</td>
+                                <td>+6012 222 4999</td>
+                                <td>CIMB Bank - Taman Mutiara</td>
+                                <td>Human Resources</td>
+                                <td>05-03-2022, 03:32 pm</td>
+                                <td class="text-center" dropdown>
+                                    <div class="dropdown dropleft">                              
+                                        <img class="dropdown-toggle" style="width:5px" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="../../../../assets/img/general/table-action.png ">
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                          <a class="dropdown-item" href="#">View User</a>
+                                          <a class="dropdown-item" href="#">Edit User</a>                                 
+                                        </div>
+                                      </div>
+                                </td>       
+                              </tr>
+
+                            </tbody>
+                        </table> 
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

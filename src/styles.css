@@ -732,7 +732,7 @@ ul li {
   border-left: 0;
   padding-left: 0;
 }
-
+ 
 .dropdown-item{
   color:#9F9F9F;
   padding: 10px 20px;
@@ -749,4 +749,121 @@ ul li {
 }
 .line-height-normal{
   line-height: normal;
+}
+a.paginate_button {
+  background: #fff !important;
+}
+
+a.paginate_button.first, a.paginate_button.last {
+  display: none !important;
+}
+
+a#DataTables_Table_0_previous, a#DataTables_Table_0_next {
+  background: transparent !important;
+  color: #242424 !important;
+  font-size: 13px !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+  background: #fff !important;
+  border: none !important;
+  border-radius: 0;
+  font-size: 13px;
+  margin: 0 4px;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+  background: #F6C35A !important;
+  color: #fff !important;
+}
+table.dataTable tbody td {
+  color: #5C6165;
+  font-size: 15px;
+  padding: 15px 10px !important;
+  border-top: 3px solid #E6E6E6;
+}
+
+table.dataTable.no-footer {
+  border: none !important;
+}
+table.dataTable thead th {
+  border-bottom: 0;
+  font-weight: 400 !important;
+}
+
+table.dataTable thead th {
+  border-bottom: 0 !important;
+  padding: 15px 10px !important;
+}
+.dataTables_paginate{
+  margin-top:10px;
+}
+.chkboxwrap {
+  /* display: block; */
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.chkboxwrap input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.checkmark {
+    position: absolute;
+    top:-5px;
+    left: 0;
+    height: 23px;
+    width: 23px;
+    background-color: #ffffff;
+    border: 1px solid rgb(112 112 112 / 76%);
+    border-radius: 6px;
+}
+
+.chkboxwrap:hover input ~ .checkmark {
+  background-color: #ffffff;
+}
+.chkboxwrap input:checked ~ .checkmark {
+  background-color: #F6C35A;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.table td, .table th{
+  color: #5C6165;
+  font-weight: 400;
+}
+.table td{
+  font-size: 16px;
+}
+
+
+.chkboxwrap input:checked ~ .checkmark:after {
+  display: block;
+}
+
+
+.chkboxwrap .checkmark:after {
+  left: 7px;
+  top: 3px;
+  width: 7px;
+  height: 13px; 
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }

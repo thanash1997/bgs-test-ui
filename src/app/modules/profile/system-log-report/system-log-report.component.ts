@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./system-log-report.component.css']
 })
 export class SystemLogReportComponent implements OnInit {
-
+  dtOptions: DataTables.Settings = {};
   constructor() { }
 
   ngOnInit(): void {
+    this.dtOptions = {
+      pagingType: 'full_numbers'
+    };
   }
+  
 
 }

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule }   from '@angular/forms';
-
+import { DataTablesModule } from "angular-datatables";
 
 import { AppRoutingModule } from './app-routing.module';
 import { ProfileModule } from './modules/profile/profile.module';
@@ -17,6 +17,8 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { ProfileLayoutComponent } from './layout/profile-layout/profile-layout.component';
 import {  BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CheckdatabaseComponent } from './pages/checkdatabase/checkdatabase.component';
+import { ContactlistComponent } from './pages/contactlist/contactlist.component';
 
 
 @NgModule({
@@ -31,6 +33,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ForgotPasswordComponent,
     DashboardComponent,
     ProfileLayoutComponent,
+    CheckdatabaseComponent,
+    ContactlistComponent,
     
   ],
   imports: [
@@ -39,7 +43,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ProfileModule,
     FormsModule,
     BsDatepickerModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    DataTablesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
