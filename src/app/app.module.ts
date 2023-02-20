@@ -19,6 +19,8 @@ import {  BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CheckdatabaseComponent } from './pages/checkdatabase/checkdatabase.component';
 import { ContactlistComponent } from './pages/contactlist/contactlist.component';
+import { ModalModule, BsModalService } from 'ngx-bootstrap/modal';
+
 
 
 @NgModule({
@@ -44,9 +46,10 @@ import { ContactlistComponent } from './pages/contactlist/contactlist.component'
     FormsModule,
     BsDatepickerModule,
     BrowserAnimationsModule,
-    DataTablesModule
+    DataTablesModule,
+    ModalModule
   ],
-  providers: [],
+  providers: [BsModalService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

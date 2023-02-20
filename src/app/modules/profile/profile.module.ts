@@ -9,7 +9,7 @@ import { SystemLogReportComponent } from './system-log-report/system-log-report.
 import {  BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { DataTablesModule } from 'angular-datatables';
 import { RoleEditorComponent } from './role-editor/role-editor.component';
-
+import { ModalModule } from 'ngx-bootstrap/modal';
 @NgModule({
   declarations: [
     MyProfileComponent,
@@ -23,7 +23,8 @@ import { RoleEditorComponent } from './role-editor/role-editor.component';
     CommonModule,
     ProfileRoutingModule,
     BsDatepickerModule.forRoot(),
-    DataTablesModule
+    DataTablesModule,
+    ModalModule.forRoot()
   ]
 })
 export class ProfileModule { }

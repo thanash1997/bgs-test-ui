@@ -846,15 +846,23 @@ table.dataTable thead th {
   color: #5C6165;
   font-weight: 400;
 }
+.table th{
+  color: #fff;
+}
 .table td{
   font-size: 16px;
 }
-
+.dropdown-menu.show {
+  padding: 0;
+}
 
 .chkboxwrap input:checked ~ .checkmark:after {
   display: block;
 }
-
+table.dataTable td .dropdown a:hover {
+  background: #e6e6e6;
+  color: #000;
+}
 
 .chkboxwrap .checkmark:after {
   left: 7px;
