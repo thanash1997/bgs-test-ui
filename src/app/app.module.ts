@@ -3,8 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule }   from '@angular/forms';
 import { DataTablesModule } from "angular-datatables";
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { ProfileModule } from './modules/profile/profile.module';
+
 import { AppComponent } from './app.component';
 import { AppAdminLayoutComponent } from './layout/app-admin-layout/app-admin-layout.component';
 import { HeaderComponent } from './layout/header/header.component';
@@ -20,6 +22,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CheckdatabaseComponent } from './pages/checkdatabase/checkdatabase.component';
 import { ContactlistComponent } from './pages/contactlist/contactlist.component';
 import { ModalModule, BsModalService } from 'ngx-bootstrap/modal';
+import { AddNewChecksComponent } from './pages/add-new-checks/add-new-checks.component';
+import { ClientModule } from './modules/client/client.module';
 
 
 
@@ -37,6 +41,8 @@ import { ModalModule, BsModalService } from 'ngx-bootstrap/modal';
     ProfileLayoutComponent,
     CheckdatabaseComponent,
     ContactlistComponent,
+    AddNewChecksComponent,
+
     
   ],
   imports: [
@@ -45,9 +51,11 @@ import { ModalModule, BsModalService } from 'ngx-bootstrap/modal';
     ProfileModule,
     FormsModule,
     BsDatepickerModule,
+    ClientModule,
     BrowserAnimationsModule,
     DataTablesModule,
-    ModalModule
+    ModalModule,
+   
   ],
   providers: [BsModalService],
   bootstrap: [AppComponent]

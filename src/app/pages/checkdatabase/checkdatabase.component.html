@@ -1,5 +1,5 @@
 
-<div class="container-fluid pt-3">
+<div class="container-fluid pt-3 checkdatabase">
     <div class="col-inner w-100">
         <h5 class="page-title mb-4">Checks Database</h5>
         <div class="row mb-3">
@@ -40,133 +40,96 @@
                 </li>
                 </ul>
             </div>
-            <div class="col-md-4">
-                
+            <div class="col-md-4">                
             </div>     
       </div>
+      <div class="w-75">
+        <div class=" border-0 ">
+          <div class="pl-3 pr-3 pt-0">
+              <div class="row">
+                    <table datatable  datatable [dtOptions]="dtOptions" class="table table-custom mb-0">
+                      <thead>
+                          <tr>
+                              <th>CHECK NAME</th>
+                              <th>NO. OF ONGOING CHECKS</th>
+                              <th>DATE CREATED</th>
+                              <th></th>                           
+                          </tr>
+                      </thead>
+                      <tbody> 
+                        <tr>
+                          <td>Education Check</td>
+                          <td>20</td>
+                          <td>05-03-2022, 03:32 pm</td>
+                          <td class="text-center" dropdown>
+                              <div class="dropdown dropleft">                              
+                                  <img class="dropdown-toggle" style="width:5px" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="../../../../assets/img/general/table-action.png ">
+                                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="/check-database/checks-edit"><i class="fa fa-eye mr-1"></i>View Detail</a>                                                       
+                                  </div>
+                                </div>
+                          </td>  
+                        </tr>
+                        <tr>
+                          <td>Education Check</td>
+                          <td>20</td>
+                          <td>05-03-2022, 03:32 pm</td>
+                          <td class="text-center" dropdown>
+                              <div class="dropdown dropleft">                              
+                                  <img class="dropdown-toggle" style="width:5px" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="../../../../assets/img/general/table-action.png ">
+                                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="/check-database/checks-edit"><i class="fa fa-eye mr-1"></i>View Detail</a>                                                       
+                                  </div>
+                                </div>
+                          </td>  
+                        </tr>
+                        <tr>
+                          <td>Education Check</td>
+                          <td>20</td>
+                          <td>05-03-2022, 03:32 pm</td>
+                          <td class="text-center" dropdown>
+                              <div class="dropdown dropleft">                              
+                                  <img class="dropdown-toggle" style="width:5px" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="../../../../assets/img/general/table-action.png ">
+                                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="/check-database/checks-edit"><i class="fa fa-eye mr-1"></i>View Detail</a>                                                       
+                                  </div>
+                                </div>
+                          </td>  
+                        </tr>
+                        <tr>
+                          <td>Education Check</td>
+                          <td>20</td>
+                          <td>05-03-2022, 03:32 pm</td>
+                          <td class="text-center" dropdown>
+                              <div class="dropdown dropleft">                              
+                                  <img class="dropdown-toggle" style="width:5px" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="../../../../assets/img/general/table-action.png ">
+                                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="/check-database/checks-edit"><i class="fa fa-eye mr-1"></i>View Detail</a>                                                       
+                                  </div>
+                                </div>
+                          </td>  
+                        </tr>
+                        <tr>
+                          <td>Education Check</td>
+                          <td>20</td>
+                          <td>05-03-2022, 03:32 pm</td>
+                          <td class="text-center" dropdown>
+                              <div class="dropdown dropleft">                              
+                                  <img class="dropdown-toggle" style="width:5px" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="../../../../assets/img/general/table-action.png ">
+                                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="/check-database/checks-edit">View Detail</a>                                                       
+                                  </div>
+                                </div>
+                          </td>  
+                        </tr>
+                       
+                      </tbody>
+                  </table> 
+              </div>
+          </div>
+      </div>
+      </div>
         <!-- <a><img src="../../../../assets/img/general/cnewuser.png" alt="create-newuser"></a> -->
-        <div class=" border-0 box-shadow">
-            <div class="pl-3 pr-3 pt-0">
-                <div class="row">
-            
-                      <table datatable  datatable [dtOptions]="dtOptions" class="table table-custom mb-0">
-                        <thead>
-                            <tr>
-                                <th>CHECK NAME</th>
-                                <th>NO. OF ONGOING CHECKS</th>
-                                <th>DATE CREATED</th>
-                                <th></th>                           
-                            </tr>
-                        </thead>
-                        <tbody> 
-                          <tr>
-                            <td>05-03-2022</td>
-                            <td>08:28 AM</td>
-                            <td>Christine reuploaded report for candidate #C81182</td>
-                            <td class="text-center" dropdown>
-                                <div class="dropdown dropleft">                              
-                                    <img class="dropdown-toggle" style="width:5px" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="../../../../assets/img/general/table-action.png ">
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                      <a class="dropdown-item" href="#">View User</a>
-                                      <a class="dropdown-item" href="#">Edit User</a>                                 
-                                    </div>
-                                  </div>
-                            </td>                                        
-                            
-                          </tr>
-                          <tr>
-                            <td>05-03-2022</td>
-                            <td>08:28 AM</td>
-                            <td>Christine reuploaded report for candidate #C81182</td>
-                            <td class="text-center" dropdown>
-                                <div class="dropdown dropleft">                              
-                                    <img class="dropdown-toggle" style="width:5px" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="../../../../assets/img/general/table-action.png ">
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                      <a class="dropdown-item" href="#">View User</a>
-                                      <a class="dropdown-item" href="#">Edit User</a>                                 
-                                    </div>
-                                  </div>
-                            </td>                                        
-                            
-                          </tr>
-                          <tr>
-                            <td>05-03-2022</td>
-                            <td>08:28 AM</td>
-                            <td>Christine reuploaded report for candidate #C81182</td>
-                            <td class="text-center" dropdown>
-                                <div class="dropdown dropleft">                              
-                                    <img class="dropdown-toggle" style="width:5px" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="../../../../assets/img/general/table-action.png ">
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                      <a class="dropdown-item" href="#">View User</a>
-                                      <a class="dropdown-item" href="#">Edit User</a>                                 
-                                    </div>
-                                  </div>
-                            </td>                                 
-                            
-                          </tr>
-                          <tr>
-                            <td>05-03-2022</td>
-                            <td>08:28 AM</td>
-                            <td>Christine reuploaded report for candidate #C81182</td>
-                            <td class="text-center" dropdown>
-                                <div class="dropdown dropleft">                              
-                                    <img class="dropdown-toggle" style="width:5px" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="../../../../assets/img/general/table-action.png ">
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                      <a class="dropdown-item" href="#">View User</a>
-                                      <a class="dropdown-item" href="#">Edit User</a>                                 
-                                    </div>
-                                  </div>
-                            </td>                                        
-                            
-                          </tr>
-                          <tr>
-                            <td>05-03-2022</td>
-                            <td>08:28 AM</td>
-                            <td>Christine reuploaded report for candidate #C81182</td>
-                            <td class="text-center" dropdown>
-                                <div class="dropdown dropleft">                              
-                                    <img class="dropdown-toggle" style="width:5px" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="../../../../assets/img/general/table-action.png ">
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                      <a class="dropdown-item" href="#">View User</a>
-                                      <a class="dropdown-item" href="#">Edit User</a>                                 
-                                    </div>
-                                  </div>
-                            </td>                             
-                            
-                          </tr>
-                          <tr>
-                            <td>05-03-2022</td>
-                            <td>08:28 AM</td>
-                            <td>Christine reuploaded report for candidate #C81182</td>
-                            <td class="text-center" dropdown>
-                                <div class="dropdown dropleft">                              
-                                    <img class="dropdown-toggle" style="width:5px" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="../../../../assets/img/general/table-action.png ">
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                      <a class="dropdown-item" href="#">View User</a>
-                                      <a class="dropdown-item" href="#">Edit User</a>                                 
-                                    </div>
-                                  </div>
-                            </td>                              
-                            
-                          </tr>
-                          <tr>
-                            <td>05-03-2022</td>
-                            <td>08:28 AM</td>
-                            <td>Christine reuploaded report for candidate #C81182</td>
-                            <td class="text-center" dropdown>
-                                <div class="dropdown dropleft">                              
-                                    <img class="dropdown-toggle" style="width:5px" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="../../../../assets/img/general/table-action.png ">
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                      <a class="dropdown-item" href="#">View User</a>
-                                      <a class="dropdown-item" href="#">Edit User</a>                                 
-                                    </div>
-                                  </div>
-                            </td>                 
-                          </tr> 
-                        </tbody>
-                    </table> 
-                </div>
-            </div>
-        </div>
+
     </div>
 </div>

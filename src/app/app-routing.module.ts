@@ -7,6 +7,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { CheckdatabaseComponent } from './pages/checkdatabase/checkdatabase.component';
 import { ContactlistComponent } from './pages/contactlist/contactlist.component';
+import { AddNewChecksComponent } from './pages/add-new-checks/add-new-checks.component';
 
 const routes: Routes = [
   // {
@@ -28,6 +29,7 @@ const routes: Routes = [
     component: AppAdminLayoutComponent,
     children: [
       { path: '', component: CheckdatabaseComponent },
+      { path: 'checks-edit', component: AddNewChecksComponent },
     ]
   },
   {
