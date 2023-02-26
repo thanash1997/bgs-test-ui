@@ -546,11 +546,15 @@ iframe {
   height: 44px;
   padding: 10px 25px;
 }
-button.btn-outline-border {
+.btn-outline-border {
   border: 1px solid #c9c9c9 !important;
   color: #c9c9c9 !important;
   border-radius: 6px;
   font-size: 14px;
+}
+.l-green{
+  background-color: #5AC51D;
+  color:#fff !important;
 }
 .btn-secondary{
   background-color: #F0F0F0 !important;
@@ -954,4 +958,58 @@ input:checked + .slider:before {
 .clientlist .col-md-2 {
   flex: 0 0 20%;
   max-width: 20%;
+}
+.card-header-space-between{
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.img-header-wrpper {
+  background: #ccc;
+  padding: 10px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.img-header-wrpper img {
+  background: #fff;
+  border-radius: 50%;
+}
+.img-header-wrpper img.clientlogo {
+  width: 100px;
+  height: 100px;
+}
+.clearfilter button.btn {
+    font-size: 14px;
+    color: #C7C7D1;
+}
+.custom-pagination li a {
+  color: #5C6165;
+  margin: 0 5px;
+}
+.bg-wrapper {
+  background-color: #7B040B;
+}
+.pt-7 {
+  padding-top: 125px;
+}
+.detail-primg img{
+  border-radius: 50%;
+  border:1px solid #707070;
+}
+.mn-10 {
+  margin-top: -10%;
+}
+.client-prf-menu li a{
+  padding:10px 15px;
+  color: #C7C7D1;
+  /* border-bottom: 3px solid #C7C7D1; */
+}
+.border-bottom-4px{
+  border-bottom: 4px solid #C7C7D1;
+}
+.client-prf-menu li a.active {
+  color: #DB8A22;
+  border-bottom: 4px solid #DB8A22;
+  font-weight: 700;
 }
