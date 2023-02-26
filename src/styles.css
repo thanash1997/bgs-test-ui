@@ -1005,6 +1005,12 @@ input:checked + .slider:before {
   color: #C7C7D1;
   /* border-bottom: 3px solid #C7C7D1; */
 }
+.client-detailswraper span{
+  font-weight: 500;
+}
+.client-detailswraper a{
+  color: #C7C7D1;
+}
 .border-bottom-4px{
   border-bottom: 4px solid #C7C7D1;
 }
