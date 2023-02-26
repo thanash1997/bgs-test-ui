@@ -1019,3 +1019,12 @@ input:checked + .slider:before {
   border-bottom: 4px solid #DB8A22;
   font-weight: 700;
 }
+.packagelist-card{
+  border-left: 10px solid #314CD4;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.btn.viewbtn {
+  padding: 6px 44px;
+  height: auto;
+}
