@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard as AuthService } from "./services/auth.guard";
+
 import { AppAdminLayoutComponent  } from './layout/app-admin-layout/app-admin-layout.component';
 import { AuthLayoutComponent } from './layout/auth-layout/auth-layout.component';
 import { MyProfileComponent } from './modules/profile/my-profile/my-profile.component';
@@ -10,13 +12,18 @@ import { ContactlistComponent } from './pages/contactlist/contactlist.component'
 import { AddNewChecksComponent } from './pages/add-new-checks/add-new-checks.component';
 
 const routes: Routes = [
-  // {
-  //   path: 'my-profile',
-  //   component: AppAdminLayoutComponent,
-  //   children: [
-  //     { path: '', component: MyProfileComponent },
-  //   ]
-  // },
+  {
+    path: '',
+    component: LoginComponent
+  },
+  {
+    path: 'dashboard',
+    component: AppAdminLayoutComponent,
+    canActivate: [AuthService],
+    children: [
+      { path: '', component: DashboardComponent },
+    ]
+  },
   {
     path: '',
     component: AppAdminLayoutComponent,
