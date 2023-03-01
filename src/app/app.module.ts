@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule }   from '@angular/forms';
 import { DataTablesModule } from "angular-datatables";
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -57,7 +59,8 @@ import { ClientProfileLayoutComponent } from './layout/client-profile-layout/cli
     BrowserAnimationsModule,
     DataTablesModule,
     ModalModule,
-   
+    HttpClientModule,
+    ReactiveFormsModule,
   ],
   providers: [BsModalService],
   bootstrap: [AppComponent]

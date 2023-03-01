@@ -1,32 +1,33 @@
 <div class="limiter">
     <div class="container-login100" style="background-image: url('assets/img/login/login-bg.png');">
         <div class="wrap-login100">
-            <form class="login100-form validate-form" #f="ngForm" novalidate (ngSubmit)="f.form.valid&&onSubmit()">
+            <form class="login100-form validate-form" autocomplete="off" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
                 <span class="login100-form-logo">
                   <img src="assets/img/login/login-logo.png">
                 </span>
                 <h4 class="text-white mb-4 mt-4">Login to your account</h4>
 
-                <div class="wrap-input100 validate-input" data-validate = "Enter Email">
-                    <input class="input100" type="text" name="email" placeholder="Email" [(ngModel)]="formdata.email" #email="ngModel" required>
+                <div class="wrap-input100 validate-input">
+                    <input class="input100" type="text" name="username" placeholder="Username"  formControlName="username">
                 </div>
-                <div class="err-wrapper">
-                    <span class="focus-input100" data-placeholder="&#xf207;" *ngIf="this.submit&&email.errors?.['required']">
-                        Email is Required
-                    </span>
+                <div class="err-wrapper" *ngIf="!f.username?.valid && submitted">
+                    <span *ngIf="f.username?.errors?.['required']">
+                       Username requird </span>
                 </div>
 
                 <div class="wrap-input100 validate-input">
-                    <input class="input100" type="password" name="pass" placeholder="Password"  [(ngModel)]="formdata.password" #password="ngModel" required>
-                    
+                    <input class="input100" type="password" name="pass" placeholder="Password" formControlName="password"/>
                 </div>
-                <div class="err-wrapper">
-                    <span class="focus-input100" data-placeholder="&#xf191;" *ngIf="this.submit&&password.errors?.['required']">
+                <div class="err-wrapper" *ngIf="!f.password?.valid && submitted">
+                    <span *ngIf="f.password?.errors?.['required']">
                         Password is Required
                     </span>
                 </div>
-                <div class="isloader" *ngIf="this.loading">
+                <div class="isloader" *ngIf="loading">
                     <span>Loading .....</span>
+                </div>
+                <div *ngIf="response!='' && !loading">
+                    {{response}}                   
                 </div>
                 <!-- <div class="contact100-form-checkbox">
                     <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
@@ -45,8 +46,6 @@
                         Login
                     </button>
                 </div>
-
-
             </form>
         </div>
     </div>
