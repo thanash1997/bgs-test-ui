@@ -1,0 +1,73 @@
+<div class="col-inner w-75">
+    <h3>User Profile View</h3>
+    <div class="card border-0 box-shadow">
+        <div class="card-body">
+            <form  autocomplete="off" [formGroup]="profileFrom">  
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>First Name</label>   
+                        <input type="text" name="first_name" class="form-control" readonly formControlName="first_name" />
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Last Name</label>   
+                        <input type="text" name="last_name"  class="form-control" readonly formControlName="last_name" /> 
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Username</label>   
+                        <input type="text" name="username"  class="form-control" readonly formControlName="username" />
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Email</label>   
+                        <input type="text" name="email"  class="form-control" readonly formControlName="email" />
+                    </div>
+                </div>
+               
+                
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Team</label> 
+                        <select name="team_id" readonly formControlName="team_id" class="form-control">
+                            <option value="">Select</option>
+                            <option value="1">Team 1</option>
+                        </select>  
+                    </div>
+                    
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Role</label> 
+                        <select name="role_id" readonly  formControlName="role_id" class="form-control">
+                            <option value="">Select</option>
+                            <option value="2">Team Leader</option>
+                            <option value="3">Operations Admin</option>
+                            <option value="4">Operations Manager</option>
+                        </select>
+                    </div>
+                    
+                    
+                </div> 
+
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Profile Picture</label>     
+                        <div class="mt-3 text-center" *ngIf="choosedimg">
+                            <img src="{{choosedimg}}" alt="" style="max-width: 100px; max-height: 100px;">
+                        </div> 
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <a routerLink="/user/{{userId}}/edit" class="btn btn-primary border-0 pl-4 pr-4 pt-2 pb-2 mr-2">Edit</a>
+                    <a routerLink="/user-management" type="button" class="btn btn-secondary">Cancel</a>
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>

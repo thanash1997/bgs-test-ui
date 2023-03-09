@@ -4,6 +4,9 @@ import { FormsModule }   from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
+import { UserViewComponent } from './user-management/user-view/user-view.component';
+import { UserEditComponent } from './user-management/user-edit/user-edit.component';
+import { UserCreateComponent } from './user-management/user-create/user-create.component';
 
 
 import { ProfileRoutingModule } from './profile-routing.module';
@@ -16,6 +19,7 @@ import {  BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { DataTablesModule } from 'angular-datatables';
 import { RoleEditorComponent } from './role-editor/role-editor.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
+
 @NgModule({
   declarations: [
     MyProfileComponent,
@@ -23,7 +27,10 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     UserManagementComponent,
     ReportsComponent,
     SystemLogReportComponent,
-    RoleEditorComponent
+    RoleEditorComponent,
+    UserViewComponent,
+    UserEditComponent,
+    UserCreateComponent
   ],
   imports: [
     CommonModule,

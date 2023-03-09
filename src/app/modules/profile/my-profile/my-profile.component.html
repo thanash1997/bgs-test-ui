@@ -45,10 +45,9 @@
                 </div>
                 <div class="col-md-12">
                     <div class="form-group">
-                        <label>Profile Picture</label><br>   
-                        <label><strong>Add a photo of you / your company</strong></label>   
+                        <label>Profile Picture</label> 
+                        <div><label><strong>Add a photo of you / your company</strong></label> </div> 
                         
-                      
                         <input type="file" name="profile_pic" formControlName="profile_pic" accept=".png, .jpg, .jpeg" (change)="onFileChanged($event)"/>
                                     
                         <div class="mt-3 text-center" *ngIf="choosedimg">
@@ -58,7 +57,7 @@
                 </div>
                 <div class="col-md-12">
                     <button type="submit" class="btn btn-primary border-0 pl-4 pr-4 pt-2 pb-2 mr-2">Update</button>
-                    <button type="button" class="btn btn-secondary">Cancel</button>
+                    <a routerLink="/dashboard" class="btn btn-secondary">Cancel</a>
                 </div>
             </div>
         </form>
