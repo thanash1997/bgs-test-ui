@@ -55,6 +55,9 @@ export class UserManagementComponent implements OnInit {
         })
       },
       (msg:any)=>{
+        this.toastr.error('', 'Try Later...',{
+          positionClass: 'toast-bottom-right',
+        })
       }
     );
     

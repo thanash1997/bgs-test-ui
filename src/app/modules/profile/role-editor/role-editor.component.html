@@ -7,15 +7,18 @@
                     <div class="form-group">
                       <label>Select a role to edit</label>   
                       <div class="input-group" style="width:350px;">                         
-                            <select class="form-control" >
-                              <option>Operations Leader</option>
-                              <option>Operations Leader</option>
-                              <option>Operations Leader</option>
+                            <select class="form-control" (change)="loadPermissions($event)">
+                              <option value="">Select</option>
+                              <option value="1"> Administrator</option>
+                              <option value="2">Team Leader</option>
+                              <option value="3">Operations Admin</option>
+                              <option value="4">Operations Manager</option>
                           </select> 
                       </div>  
                   </div>
                 </div>
-                <table class="table w-50">                  
+               
+                <table class="table w-50" *ngIf="result.length"> 
                     <thead>
                       <tr>
                         <th scope="col"></th>
@@ -24,94 +27,32 @@
                         <th scope="col">Read & Write</th>
                       </tr>
                     </thead>
-                    <tbody>
-                      <tr>                       
-                        <td>Assign Cases</td>
+                    <tbody >
+                      <tr *ngFor="let item of result; let i=index;" >            
+                        <td>{{item.name}}</td>
                         <td class="text-center">
-                            <label class="chkboxwrap">
-                                <input type="checkbox" checked="checked">
-                                <span class="checkmark"></span>
-                              </label>
-                        </td>
-                        <td class="text-center">
-                            <label class="chkboxwrap">
-                                <input type="checkbox" checked="checked">
+                            <label class="chkboxwrap">  
+                                <input type="checkbox" (change)="permission($event)" [attr.data-ind]="i" name="permission_{{item.pivot.permission_id}}" value="read"  title="Read"  [checked]="item.pivot.read==1" >
                                 <span class="checkmark"></span>
                               </label>
                         </td>
                         <td class="text-center">
                             <label class="chkboxwrap">
-                                <input type="checkbox" checked="checked">
+                                <input type="checkbox" (change)="permission($event)" [attr.data-ind]="i"  class="permission_write_{{item.pivot.permission_id}}" name="permission_{{item.pivot.permission_id}}" title="Write" [checked]="item.pivot.write==1">
                                 <span class="checkmark"></span>
                               </label>
                         </td>
-                      </tr>
-                      <tr>
-                        
-                        <td>Delete</td>
-                        <td class="text-center"> 
+                        <td class="text-center">
                             <label class="chkboxwrap">
-                                <input type="checkbox" checked="checked">
+                                <input type="checkbox" [attr.data-ind]="item.pivot.permission_id"  name="permission_{{item.pivot.permission_id}}" (click)="read_write($event)" value="readwrite"  [checked]="item.pivot.read==1 && item.pivot.write==1">
                                 <span class="checkmark"></span>
                               </label>
                         </td>
-                        <td class="text-center">  
-                            <label class="chkboxwrap">
-                                <input type="checkbox" checked="checked">
-                                <span class="checkmark"></span>
-                              </label>
-                        </td>
-                        <td class="text-center">                              
-                            <label class="chkboxwrap">
-                                <input type="checkbox" checked="checked">
-                                <span class="checkmark"></span>
-                              </label>
-                        </td>
-                      </tr>
-                      <tr>                        
-                        <td>Customise Packages</td>
-                        <td class="text-center"> 
-                            <label class="chkboxwrap">
-                                <input type="checkbox" checked="checked">
-                                <span class="checkmark"></span>
-                              </label>
-                           </td>
-                           <td class="text-center">  
-                            <label class="chkboxwrap">
-                                <input type="checkbox" checked="checked">
-                                <span class="checkmark"></span>
-                              </label>
-                           </td>
-                           <td class="text-center">  
-                            <label class="chkboxwrap">
-                                <input type="checkbox" checked="checked">
-                                <span class="checkmark"></span>
-                              </label>
-                           </td>
-                      </tr>
-                      <tr>                        
-                        <td>Customise Client Data</td>
-                        <td class="text-center"> 
-                            <label class="chkboxwrap">
-                                <input type="checkbox" checked="checked">
-                                <span class="checkmark"></span>
-                              </label>
-                           </td>
-                           <td class="text-center">  
-                            <label class="chkboxwrap">
-                                <input type="checkbox" checked="checked">
-                                <span class="checkmark"></span>
-                              </label>
-                           </td>
-                           <td class="text-center">  
-                            <label class="chkboxwrap">
-                                <input type="checkbox" checked="checked">
-                                <span class="checkmark"></span>
-                              </label>
-                           </td>
                       </tr>
                     </tbody>
                   </table>
+                  
+                      
             </div>
         </div>
     </div>

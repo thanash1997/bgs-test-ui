@@ -1,0 +1,165 @@
+
+<div class="container-fluid pt-3 pb-5">
+    
+        <h6>Check Details</h6>
+    <div class="col-inner w-100">
+        <h4 class="page-title mb-4">Edit Check</h4>
+        <div class="row mb-3">         
+          <div class="col-md-6">
+            <div class="card border-0">
+                <div class="card-body w-75">
+                    <form  autocomplete="off" [formGroup]="chkFrom" (ngSubmit)="onSubmit()">
+                    <p class="font-12">Enter your new check details here</p>
+                    <div class="form-group">            
+                        <label>Check Name</label>   
+                        <input type="text" name="name" formControlName="name"  class="form-control"/> 
+                        <div *ngIf="submitted && !chkFrom.get('name')?.valid">
+                            <small class="text-danger" *ngIf="chkFrom.get('name')?.errors?.['required']">
+                                Name password </small>
+                        </div>  
+                    </div>
+
+                    <div class="form-group"> 
+                      <label>Pricing of Check</label>     
+                      <div class="row">
+                        <div class="col-md-4 pr-0">
+                          <input type="number" name="price" formControlName="price"  class="form-control"/> 
+                          <div *ngIf="submitted && !chkFrom.get('price')?.valid">
+                            <small class="text-danger" *ngIf="chkFrom.get('price')?.errors?.['required']">
+                                Price password </small>
+                        </div> 
+                        </div>
+                       <!--  <div class="col-md-10">
+                          <input type="text" name="contactemail" class="form-control"/> 
+                        </div> -->
+                      </div>    
+                    </div>  
+                    <button type="submit" class="btn btn-primary">Update</button>
+                    <a routerLink="/check-database" type="button" class="ml-2 btn btn-secondary">Cancel</a>
+                    </form>
+                </div>
+            </div>
+                
+            </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 ">
+            <div class="card border-0">
+                <div class="card-body">
+                    <h6>Configure Check Template (Sharon please give ideas)</h6>
+                    <p class="mb-0">Enter your check details to be filled up here</p>
+                </div>
+            </div>                    
+        </div>
+        <div class="col-md-12 mt-2">
+            <div class="card border-0">
+                <div class="card-body">                 
+                    <div class="row">
+                        <div class="col-md-10">
+                            <div class="form-group">            
+                                <label>Question 1</label>   
+                                <input type="text" name="contactname" class="form-control" placeholder="Question"/> 
+                                </div>
+                        </div>
+                        <div class="col-md-2 mt-2">
+                            <button class="btn mt-4 border w-100">Short answer</button>
+                        </div>
+                        <div class="col-md-12">
+                          <ul class="pl-0">
+                            <li class="d-inline-block">
+                              <div class="chkscontrol">
+                                <a routerLink="/user/bob"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 32.571 32.571">
+                                  <g id="paste" transform="translate(0)">
+                                    <g id="Group_389" data-name="Group 389" transform="translate(0)">
+                                      <g id="Group_388" data-name="Group 388">
+                                        <path id="Path_482" data-name="Path 482" d="M23.451,0H1.3A1.3,1.3,0,0,0,0,1.3V23.451a1.3,1.3,0,0,0,1.3,1.3H23.451a1.3,1.3,0,0,0,1.3-1.3V1.3A1.3,1.3,0,0,0,23.451,0Zm-1.3,22.148H2.606V2.606H22.148Z" fill="#5c6165"/>
+                                      </g>
+                                    </g>
+                                    <g id="Group_391" data-name="Group 391" transform="translate(26.708 26.708)">
+                                      <g id="Group_390" data-name="Group 390">
+                                        <path id="Path_483" data-name="Path 483" d="M423.1,419.84V423.1H419.84V425.7h4.56a1.3,1.3,0,0,0,1.3-1.3v-4.56Z" transform="translate(-419.84 -419.84)" fill="#5c6165"/>
+                                      </g>
+                                    </g>
+                                    <g id="Group_393" data-name="Group 393" transform="translate(16.689 29.965)">
+                                      <g id="Group_392" data-name="Group 392">
+                                        <rect id="Rectangle_850" data-name="Rectangle 850" width="7.009" height="2.606" fill="#5c6165"/>
+                                      </g>
+                                    </g>
+                                    <g id="Group_395" data-name="Group 395" transform="translate(7.817 26.708)">
+                                      <g id="Group_394" data-name="Group 394">
+                                        <path id="Path_484" data-name="Path 484" d="M125.486,423.1V419.84H122.88v4.56a1.3,1.3,0,0,0,1.3,1.3h4.56V423.1Z" transform="translate(-122.88 -419.84)" fill="#5c6165"/>
+                                      </g>
+                                    </g>
+                                    <g id="Group_397" data-name="Group 397" transform="translate(26.708 7.817)">
+                                      <g id="Group_396" data-name="Group 396">
+                                        <path id="Path_485" data-name="Path 485" d="M424.4,122.88h-4.56v2.606H423.1v3.257H425.7v-4.56A1.3,1.3,0,0,0,424.4,122.88Z" transform="translate(-419.84 -122.88)" fill="#5c6165"/>
+                                      </g>
+                                    </g>
+                                    <g id="Group_399" data-name="Group 399" transform="translate(29.965 16.689)">
+                                      <g id="Group_398" data-name="Group 398">
+                                        <rect id="Rectangle_851" data-name="Rectangle 851" width="2.606" height="7.009" fill="#5c6165"/>
+                                      </g>
+                                    </g>
+                                  </g>
+                                </svg>
+                              </a>
+                              </div>
+                            </li>
+                            <li class="d-inline-block ml-2 pr-3 border-right">
+                              <div class="chkscontrol">
+                                <a routerLink="/user/bob">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 29.856 32.571">
+                                    <g id="trash" transform="translate(0)">
+                                      <g id="Group_401" data-name="Group 401" transform="translate(0)">
+                                        <g id="Group_400" data-name="Group 400">
+                                          <path id="Path_486" data-name="Path 486" d="M49.833,5.428H43.048V1.357A1.357,1.357,0,0,0,41.691,0H30.834a1.357,1.357,0,0,0-1.357,1.357V5.428H22.691a1.357,1.357,0,0,0,0,2.714h1.357V28.5a4.076,4.076,0,0,0,4.071,4.071H44.4A4.076,4.076,0,0,0,48.476,28.5V8.143h1.357a1.357,1.357,0,0,0,0-2.714ZM32.191,2.714h8.143V5.429H32.191ZM45.762,28.5A1.358,1.358,0,0,1,44.4,29.857H28.12A1.358,1.358,0,0,1,26.762,28.5V8.143h19V28.5Z" transform="translate(-21.334 0)" fill="#5c6165"/>
+                                        </g>
+                                      </g>
+                                      <g id="Group_403" data-name="Group 403" transform="translate(9.5 10.857)">
+                                        <g id="Group_402" data-name="Group 402">
+                                          <path id="Path_487" data-name="Path 487" d="M172.024,170.667a1.357,1.357,0,0,0-1.357,1.357v12.214a1.357,1.357,0,1,0,2.714,0V172.024A1.357,1.357,0,0,0,172.024,170.667Z" transform="translate(-170.667 -170.667)" fill="#5c6165"/>
+                                        </g>
+                                      </g>
+                                      <g id="Group_405" data-name="Group 405" transform="translate(17.643 10.857)">
+                                        <g id="Group_404" data-name="Group 404">
+                                          <path id="Path_488" data-name="Path 488" d="M300.024,170.667a1.357,1.357,0,0,0-1.357,1.357v12.214a1.357,1.357,0,1,0,2.714,0V172.024A1.357,1.357,0,0,0,300.024,170.667Z" transform="translate(-298.667 -170.667)" fill="#5c6165"/>
+                                        </g>
+                                      </g>
+                                    </g>
+                                  </svg>
+                                  
+                              </a>
+                              </div>
+                            </li> 
+                            <li class="d-inline-block ml-2">
+                              <div>
+                                <label class="switch">
+                                  <input type="checkbox">
+                                  <span class="slider round"></span>
+                                </label> Required
+                              </div>
+                            </li>
+                          </ul>
+                        </div>                        
+                    </div>
+                </div>
+            </div>        
+            <div class="col-md-12 text-right mt-4 pr-0">
+              <div class="form-group">
+                <button type="button" class="btn btn-outline-border  border-0 pl-4 pr-4 pt-2 pb-2 mr-2">Add Question</button>
+                <button type="button" class="btn btn-outline-border border-0 pl-4 pr-4 pt-2 pb-2 mr-2">Add Section</button>
+                <button type="button" class="btn btn-outline-border border-0 pl-4 pr-4 pt-2 pb-2">Add Title/ Description</button>             
+                </div>
+            </div>            
+            <div class="col-md-12 pl-0">
+              <div class="form-group">
+                <button type="button" class="btn btn-primary border-0 pl-4 pr-4 pt-2 pb-2 mr-2">Update</button>
+                <button type="button" class="btn btn-secondary">Preview</button>
+                </div>
+            </div>            
+        </div>
+    
+      </div>
+
+</div> 
+</div>

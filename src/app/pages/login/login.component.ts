@@ -69,7 +69,10 @@ export class LoginComponent implements OnInit {
         this.loading=false;
         if(res.status=='success'){
           this.response='';
+          let userdata=res.data;
           localStorage.setItem('token',res.data.token);
+          delete userdata['token'];
+          localStorage.setItem('userData',JSON.stringify(userdata));
           setTimeout(()=>{
             this.router.navigate(['/dashboard']); 
           },200);

@@ -76,7 +76,7 @@ export class MyProfileComponent implements OnInit {
 
   onFileChanged(event:any) {
     this.selectedFile = event.target.files[0]; 
-    console.log('-',this.selectedFile)
+    console.log(event.target.files,'-',this.selectedFile)
   }
 
   onSubmit(){
@@ -85,28 +85,39 @@ export class MyProfileComponent implements OnInit {
     console.log(form)
     if (this.profileFrom.valid) {
 
-  /*     file.upload = Upload.upload({
-        url: '/tmp',
-        data: {file: file, username: $scope.username},
-    }); */
-
+      /* delete form['profile_pic']
+      console.log(this.selectedFile)
+      Object.assign(form,{'profile_pic':this.selectedFile}); */
+      
       const formData = new FormData();
-      /* if(form.username){
+      if(form.username){
         formData.append('username', form.username);
+      }else{
+        formData.append('username', '');
       }
       if(form.first_name){
         formData.append('first_name', form.first_name);
+      }else{
+        formData.append('first_name', "");
       }
       if(form.last_name){
         formData.append('last_name', form.last_name);
+      }else{
+        formData.append('last_name', "");
       }
       if(form.email){
         formData.append('email', form.email);
+      }else{
+        formData.append('email', '');
       }
       if(this.selectedFile){
-        formData.append("image", this.selectedFile);  
-      } */
-      this.http.put(environment.apiUrl+'/my-profile', form, { headers: new HttpHeaders().set("Authorization", ''+this.token)}).subscribe((res:any)=>{
+        formData.append("profile_pic", this.selectedFile);  
+      } else{
+        formData.append("profile_pic", ''); 
+      }
+    
+
+      this.http.put(environment.apiUrl+'/my-profile',formData , { headers: new HttpHeaders().set("Authorization", ''+this.token)}).subscribe((res:any)=>{
         if(res.status='success'){
          console.log(res)
          this.toastr.success('', 'Profile Update Successfully...',{

@@ -77,7 +77,6 @@ export class UserEditComponent implements OnInit {
       },
       (msg:any)=>{
         console.log(msg);
-        
       }
     );
   }

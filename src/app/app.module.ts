@@ -26,6 +26,7 @@ import { ModalModule, BsModalService } from 'ngx-bootstrap/modal';
 import { AddNewChecksComponent } from './pages/add-new-checks/add-new-checks.component';
 import { ClientModule } from './modules/client/client.module';
 import { ClientProfileLayoutComponent } from './layout/client-profile-layout/client-profile-layout.component';
+import { EditNewChecksComponent } from './pages/edit-new-checks/edit-new-checks.component';
 
 
 
@@ -45,6 +46,7 @@ import { ClientProfileLayoutComponent } from './layout/client-profile-layout/cli
     ContactlistComponent,
     AddNewChecksComponent,
     ClientProfileLayoutComponent,
+    EditNewChecksComponent,
 
     
   ],

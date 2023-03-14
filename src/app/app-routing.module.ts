@@ -10,6 +10,7 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { CheckdatabaseComponent } from './pages/checkdatabase/checkdatabase.component';
 import { ContactlistComponent } from './pages/contactlist/contactlist.component';
 import { AddNewChecksComponent } from './pages/add-new-checks/add-new-checks.component';
+import { EditNewChecksComponent } from './pages/edit-new-checks/edit-new-checks.component';
 
 const routes: Routes = [
   {
@@ -36,7 +37,8 @@ const routes: Routes = [
     component: AppAdminLayoutComponent,
     children: [
       { path: '', component: CheckdatabaseComponent },
-      { path: 'checks-edit', component: AddNewChecksComponent },
+      { path: 'checks-edit/:id', component: EditNewChecksComponent },
+      { path: 'checks-add', component: AddNewChecksComponent },
     ]
   },
   {
