@@ -1,0 +1,38 @@
+export const screeningCaseFormHtml = `
+<div class="container">
+  <h2>{{ caseId ? 'Edit Screening Case' : 'Add Screening Case' }}</h2>
+  <form [formGroup]="screeningCaseForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="candidate_id">Candidate ID:</label>
+      <input id="candidate_id" formControlName="candidate_id" required />
+    </div>
+
+    <div>
+      <label for="client_id">Client ID:</label>
+      <input id="client_id" formControlName="client_id" required />
+    </div>
+
+    <div>
+      <label for="assigned_to">Assigned To:</label>
+      <input id="assigned_to" formControlName="assigned_to" />
+    </div>
+
+    <div>
+      <label for="status">Status:</label>
+      <select id="status" formControlName="status">
+        <option value="pending">Pending</option>
+        <option value="in-progress">In Progress</option>
+        <option value="completed">Completed</option>
+        <option value="approved">Approved</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="notes">Notes:</label>
+      <textarea id="notes" formControlName="notes"></textarea>
+    </div>
+
+    <button type="submit">{{ caseId ? 'Update' : 'Create' }}</button>
+  </form>
+</div>
+`;

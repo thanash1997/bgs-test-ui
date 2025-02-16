@@ -1,0 +1,72 @@
+<div class="container-fluid pt-3 pb-5">
+    <div class="col-inner w-100">
+        <h4 class="page-title mb-4">My Taskboard</h4>
+
+        <!-- Task Categories -->
+        <div class="row">
+            <!-- Newly Initiated -->
+            <div class="col-md-3">
+                <h5>Newly Initiated</h5>
+                <div class="task-card" *ngFor="let task of tasks.newlyInitiated">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <p class="task-id">{{task.id}}</p>
+                            <p><strong>{{task.client}}</strong></p>
+                            <p>Package: {{task.package}}</p>
+                            <p>Candidate Name: {{task.candidate}}</p>
+                            <p class="task-timer">{{task.timer}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ongoing -->
+            <div class="col-md-3">
+                <h5>Ongoing</h5>
+                <div class="task-card" *ngFor="let task of tasks.ongoing">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <p class="task-id">{{task.id}}</p>
+                            <p><strong>{{task.client}}</strong></p>
+                            <p>Package: {{task.package}}</p>
+                            <p>Candidate Name: {{task.candidate}}</p>
+                            <p class="task-timer">{{task.timer}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Submitted for Review -->
+            <div class="col-md-3">
+                <h5>Submitted for review</h5>
+                <div class="task-card" *ngFor="let task of tasks.submittedForReview">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <p class="task-id">{{task.id}}</p>
+                            <p><strong>{{task.client}}</strong></p>
+                            <p>Package: {{task.package}}</p>
+                            <p>Candidate Name: {{task.candidate}}</p>
+                            <p class="task-timer">{{task.timer}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Approved -->
+            <div class="col-md-3">
+                <h5>Approved</h5>
+                <div class="task-card" *ngFor="let task of tasks.approved">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <p class="task-id">{{task.id}}</p>
+                            <p><strong>{{task.client}}</strong></p>
+                            <p>Package: {{task.package}}</p>
+                            <p>Candidate Name: {{task.candidate}}</p>
+                            <p class="task-timer">{{task.timer}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

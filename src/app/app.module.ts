@@ -27,6 +27,8 @@ import { AddNewChecksComponent } from './pages/add-new-checks/add-new-checks.com
 import { ClientModule } from './modules/client/client.module';
 import { ClientProfileLayoutComponent } from './layout/client-profile-layout/client-profile-layout.component';
 import { EditNewChecksComponent } from './pages/edit-new-checks/edit-new-checks.component';
+import { CandidateListComponent } from './pages/candidate-list/candidate-list.component';
+import { CandidateFormComponent } from './pages/candidate-form/candidate-form.component';
 
 
 
@@ -47,6 +49,8 @@ import { EditNewChecksComponent } from './pages/edit-new-checks/edit-new-checks.
     AddNewChecksComponent,
     ClientProfileLayoutComponent,
     EditNewChecksComponent,
+    CandidateListComponent,
+    CandidateFormComponent,
 
     
   ],

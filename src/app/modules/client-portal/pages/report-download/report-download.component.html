@@ -1,0 +1,18 @@
+// HTML Code for Report Download Component
+
+export const reportDownloadHtml = `
+<div class="container">
+  <h2>Download Reports</h2>
+  <div *ngIf="loading">Loading...</div>
+  <div *ngIf="errorMessage">{{ errorMessage }}</div>
+  
+  <div *ngIf="!loading && !errorMessage">
+    <ul>
+      <li *ngFor="let report of reports">
+        Report for Screening ID: {{ report.id }}
+        <button (click)="downloadReport(report.id)">Download</button>
+      </li>
+    </ul>
+  </div>
+</div>
+`;

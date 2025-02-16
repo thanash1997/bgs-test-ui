@@ -1,0 +1,16 @@
+export const documentUploadHtml = `
+<div class="container">
+  <h2>Upload Documents</h2>
+  <input type="file" (change)="onFileSelected($event)" />
+  <button (click)="uploadDocument()">Upload</button>
+  <p *ngIf="uploadError">{{ uploadError }}</p>
+
+  <h3>Uploaded Documents</h3>
+  <div *ngIf="loading">Loading...</div>
+  <ul *ngIf="!loading">
+    <li *ngFor="let document of documents">
+      <a [href]="document.file_path" target="_blank">View Document</a>
+      <button (click)="deleteDocument(document.id)">Delete</button>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,29 @@
+export const screeningCaseListHtml = `
+<div class="container">
+  <h2>Screening Cases</h2>
+  <button routerLink="/screening-cases/add">Add Screening Case</button>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Candidate</th>
+        <th>Client</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let caseItem of screeningCases">
+        <td>{{ caseItem.id }}</td>
+        <td>{{ caseItem.candidate_id }}</td>
+        <td>{{ caseItem.client_id }}</td>
+        <td>{{ caseItem.status }}</td>
+        <td>
+          <button (click)="editScreeningCase(caseItem.id)">Edit</button>
+          <button (click)="deleteScreeningCase(caseItem.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;

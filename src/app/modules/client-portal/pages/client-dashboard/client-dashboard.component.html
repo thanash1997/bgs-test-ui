@@ -1,0 +1,21 @@
+export const clientDashboardHtml = `
+<div class="container">
+  <h2>Client Dashboard</h2>
+
+  <div *ngIf="loading">Loading...</div>
+  <div *ngIf="errorMessage">{{ errorMessage }}</div>
+
+  <div *ngIf="!loading && !errorMessage">
+    <h3>Welcome, {{ client.name }}</h3>
+    <p>Email: {{ client.email }}</p>
+    <p>Phone: {{ client.phone }}</p>
+
+    <h4>Screening Cases</h4>
+    <ul>
+      <li *ngFor="let caseItem of client.screeningCases">
+        Case ID: {{ caseItem.id }} - Status: {{ caseItem.status }}
+      </li>
+    </ul>
+  </div>
+</div>
+`;

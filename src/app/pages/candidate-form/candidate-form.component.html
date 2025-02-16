@@ -1,0 +1,33 @@
+// HTML Code for Candidate Form Component
+export const candidateFormHtml = `
+<div class="container">
+  <h2>{{ candidateId ? 'Edit Candidate' : 'Add Candidate' }}</h2>
+  <form [formGroup]="candidateForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="name">Name:</label>
+      <input id="name" formControlName="name" required />
+    </div>
+
+    <div>
+      <label for="email">Email:</label>
+      <input id="email" formControlName="email" type="email" required />
+    </div>
+
+    <div>
+      <label for="phone">Phone:</label>
+      <input id="phone" formControlName="phone" required />
+    </div>
+
+    <div>
+      <label for="status">Status:</label>
+      <select id="status" formControlName="status">
+        <option value="pending">Pending</option>
+        <option value="approved">Approved</option>
+        <option value="rejected">Rejected</option>
+      </select>
+    </div>
+
+    <button type="submit">{{ candidateId ? 'Update' : 'Create' }}</button>
+  </form>
+</div>
+`;

@@ -1,0 +1,18 @@
+
+// HTML Code for Screening Progress Component
+
+export const screeningProgressHtml = `
+<div class="container">
+  <h2>Screening Progress</h2>
+  <div *ngIf="loading">Loading...</div>
+  <div *ngIf="errorMessage">{{ errorMessage }}</div>
+  
+  <div *ngIf="!loading && !errorMessage">
+    <ul>
+      <li *ngFor="let progress of progressList">
+        Case ID: {{ progress.id }} - Status: {{ progress.status }} - Last Updated: {{ progress.updated_at }}
+      </li>
+    </ul>
+  </div>
+</div>
+`;

@@ -1,0 +1,73 @@
+import { Component, OnInit } from '@angular/core';
+import { CandidatePortalService } from '../services/candidate-portal.service';
+import { ActivatedRoute } from '@angular/router';
+
+@Component({
+  selector: 'app-candidate-dashboard',
+  templateUrl: './candidate-dashboard.component.html',
+  styleUrls: ['./candidate-dashboard.component.css']
+})
+export class CandidateDashboardComponent implements OnInit {
+  candidate: any = {};
+  candidateId!: number;
+  loading = true;
+  errorMessage = '';
+
+  constructor(
+    private candidateService: CandidatePortalService,
+    private route: ActivatedRoute
+  ) {}
+
+  ngOnInit(): void {
+    this.candidateId = Number(this.route.snapshot.paramMap.get('id'));
+    if (this.candidateId) {
+      this.loadCandidateProfile();
+    }
+  }
+
+  loadCandidateProfile(): void {
+    this.candidateService.getCandidateProfile(this.candidateId).subscribe(
+      (data) => {
+        this.candidate = data;
+        this.loading = false;
+      },
+      (error) => {
+        this.errorMessage = 'Error loading candidate profile';
+        this.loading = false;
+        console.error('Error:', error);
+      }
+    );
+  }
+}
+
+// HTML Code for Candidate Dashboard Component
+
+export const candidateDashboardHtml = `
+<div class="container">
+  <h2>Candidate Dashboard</h2>
+
+  <div *ngIf="loading">Loading...</div>
+  <div *ngIf="errorMessage">{{ errorMessage }}</div>
+
+  <div *ngIf="!loading && !errorMessage">
+    <h3>Welcome, {{ candidate.name }}</h3>
+    <p>Email: {{ candidate.email }}</p>
+    <p>Phone: {{ candidate.phone }}</p>
+    <p>Status: {{ candidate.status }}</p>
+
+    <h4>Screening Progress</h4>
+    <ul>
+      <li *ngFor="let caseItem of candidate.screeningCases">
+        Case ID: {{ caseItem.id }} - Status: {{ caseItem.status }}
+      </li>
+    </ul>
+
+    <h4>Notifications</h4>
+    <ul>
+      <li *ngFor="let notification of candidate.notifications">
+        {{ notification.message }} - {{ notification.date }}
+      </li>
+    </ul>
+  </div>
+</div>
+`;
