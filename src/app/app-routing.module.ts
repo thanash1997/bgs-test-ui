@@ -16,13 +16,15 @@ import { AddNewChecksComponent } from './pages/add-new-checks/add-new-checks.com
 import { EditNewChecksComponent } from './pages/edit-new-checks/edit-new-checks.component';
 
 // New Modules (Developed Together)
-import { ScreeningCasesComponent } from './modules/pages/screening-cases/screening-cases.component';
-import { ScreeningProgressComponent } from './modules/pages/screening-progress/screening-progress.component';
+import { ScreeningCasesComponent } from './modules/screening-cases/screening-cases.component';
+import { ScreeningProgressComponent } from './modules/client-portal/pages/screening-progress/screening-progress.component';
 import { ReportListComponent } from './modules/reports/pages/report-list/report-list.component';
 import { ReportFormComponent } from './modules/reports/pages/report-form/report-form.component';
 import { CandidatePortalComponent } from './modules/candidate-portal/candidate-portal.component';
 import { DocumentUploadComponent } from './modules/candidate-portal/pages/document-upload/document-upload.component';
-import { ClientPortalComponent } from './modules/client-portal/pages/client-portal.component';
+import { ClientPortalComponent } from './modules/client-portal/client-portal.component';
+
+
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },

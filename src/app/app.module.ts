@@ -29,6 +29,7 @@ import { ClientProfileLayoutComponent } from './layout/client-profile-layout/cli
 import { EditNewChecksComponent } from './pages/edit-new-checks/edit-new-checks.component';
 import { CandidateListComponent } from './pages/candidate-list/candidate-list.component';
 import { CandidateFormComponent } from './pages/candidate-form/candidate-form.component';
+import { ScreeningCasesComponent } from './modules/screening-cases/screening-cases.component';
 
 
 
@@ -51,6 +52,7 @@ import { CandidateFormComponent } from './pages/candidate-form/candidate-form.co
     EditNewChecksComponent,
     CandidateListComponent,
     CandidateFormComponent,
+    ScreeningCasesComponent,
 
     
   ],

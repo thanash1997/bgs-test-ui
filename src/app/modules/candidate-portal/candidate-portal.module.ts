@@ -7,6 +7,7 @@ import { DocumentUploadComponent } from './pages/document-upload/document-upload
 import { ScreeningProgressComponent } from './pages/screening-progress/screening-progress.component';
 import { NotificationsComponent } from './pages/notifications/notifications.component';
 import { ReportDownloadComponent } from './pages/report-download/report-download.component';
+import { CandidatePortalComponent } from './candidate-portal.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { ReportDownloadComponent } from './pages/report-download/report-download
     DocumentUploadComponent,
     ScreeningProgressComponent,
     NotificationsComponent,
-    ReportDownloadComponent
+    ReportDownloadComponent,
+    CandidatePortalComponent
   ],
   imports: [
     CommonModule,

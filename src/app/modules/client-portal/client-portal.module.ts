@@ -6,6 +6,7 @@ import { ClientDashboardComponent } from './pages/client-dashboard/client-dashbo
 import { RequestScreeningComponent } from './pages/request-screening/request-screening.component';
 import { ScreeningProgressComponent } from './pages/screening-progress/screening-progress.component';
 import { ReportDownloadComponent } from './pages/report-download/report-download.component';
+import { ClientPortalComponent } from './client-portal.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { ReportDownloadComponent } from './pages/report-download/report-download
     ClientDashboardComponent,
     RequestScreeningComponent,
     ScreeningProgressComponent,
-    ReportDownloadComponent
+    ReportDownloadComponent,
+    ClientPortalComponent
   ],
   imports: [
     CommonModule,

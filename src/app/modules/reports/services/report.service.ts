@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment'; // ✅ Correct Import Path
 
 interface Report {
   id?: number;
@@ -13,7 +14,7 @@ interface Report {
 
 @Injectable({ providedIn: 'root' })
 export class ReportService {
-  private apiUrl = 'http://localhost:8000/api/reports';
+  private apiUrl = `${environment.apiUrl}/reports`; // ✅ Use dynamic API URL
 
   constructor(private http: HttpClient) {}
 
