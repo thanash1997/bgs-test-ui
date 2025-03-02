@@ -4,12 +4,14 @@ import { CommonModule } from '@angular/common';
 import { ReportsRoutingModule } from './reports-routing.module';
 import { ReportListComponent } from './pages/report-list/report-list.component';
 import { ReportDetailsComponent } from './pages/report-details/report-details.component';
+import { ReportFormComponent } from './pages/report-form/report-form.component';
 
 
 @NgModule({
   declarations: [
     ReportListComponent,
-    ReportDetailsComponent
+    ReportDetailsComponent,
+    ReportFormComponent
   ],
   imports: [
     CommonModule,

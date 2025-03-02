@@ -7,6 +7,7 @@ import { RequestScreeningComponent } from './pages/request-screening/request-scr
 import { ScreeningProgressComponent } from './pages/screening-progress/screening-progress.component';
 import { ReportDownloadComponent } from './pages/report-download/report-download.component';
 import { ClientPortalComponent } from './client-portal.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { ClientPortalComponent } from './client-portal.component';
   ],
   imports: [
     CommonModule,
+    ReactiveFormsModule,
     ClientPortalRoutingModule
   ]
 })

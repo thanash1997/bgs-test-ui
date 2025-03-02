@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ReportService } from '../services/report.service';
+import { ReportService } from 'src/app/services/report.service';
+import { Router } from '@angular/router';
+import { Report } from 'src/app/models/report.model';  // ✅ Import the shared model
 
 @Component({
   selector: 'app-report-list',
@@ -7,9 +9,12 @@ import { ReportService } from '../services/report.service';
   styleUrls: ['./report-list.component.css']
 })
 export class ReportListComponent implements OnInit {
-  reports: any[] = [];
+  reports: Report[] = [];
 
-  constructor(private reportService: ReportService) {}
+  constructor(
+    private reportService: ReportService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.loadReports();
@@ -17,9 +22,14 @@ export class ReportListComponent implements OnInit {
 
   loadReports(): void {
     this.reportService.getReports().subscribe(
-      (data) => { this.reports = data; },
-      (error) => { console.error('Error fetching reports:', error); }
+      //(data: Report[]) => { this.reports = data; }, // ✅ Uses the correct shared type
+      (error: any) => { console.error('Error fetching reports:', error); }
     );
+  }
+
+  viewReport(reportId: number): void {
+    console.log("Viewing report:", reportId);
+    this.router.navigate(['/reports', reportId]);
   }
 
   deleteReport(id: number): void {

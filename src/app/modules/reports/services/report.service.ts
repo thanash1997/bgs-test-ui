@@ -1,20 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { environment } from 'src/environments/environment'; // ✅ Correct Import Path
-
-interface Report {
-  id?: number;
-  screening_case_id: number;
-  generated_by: number;
-  report_type: string;
-  status: string;
-  file_path?: string;
-}
+import { Report } from 'src/app/models/report.model';  // ✅ Import the shared model
 
 @Injectable({ providedIn: 'root' })
 export class ReportService {
-  private apiUrl = `${environment.apiUrl}/reports`; // ✅ Use dynamic API URL
+  private apiUrl = 'http://localhost:8000/api/reports';
 
   constructor(private http: HttpClient) {}
 

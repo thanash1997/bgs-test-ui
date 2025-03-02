@@ -15,13 +15,18 @@ interface CandidateProfile {
 
 @Injectable({ providedIn: 'root' })
 export class CandidatePortalService {
-  private apiUrl = 'http://localhost:8000/api/candidate-portal';
+  private apiUrl = 'http://api.bees.asia/api/candidate-portal';
 
   constructor(private http: HttpClient) {}
 
   getCandidateProfile(id: number): Observable<CandidateProfile> {
     return this.http.get<CandidateProfile>(`${this.apiUrl}/${id}`);
   }
+
+  getCandidateInfo(id: number): Observable<any> {
+    return this.http.get(`${this.apiUrl}/candidate/${id}`);
+  }
+  
 
   uploadDocument(id: number, document: File): Observable<any> {
     const formData = new FormData();

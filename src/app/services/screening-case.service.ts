@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment'; // ✅ Correct Import Path
+
 
 interface ScreeningCase {
   id?: number;
@@ -15,7 +17,8 @@ interface ScreeningCase {
 
 @Injectable({ providedIn: 'root' })
 export class ScreeningCaseService {
-  private apiUrl = 'http://localhost:8000/api/screening-cases';
+  private apiUrl = `${environment.apiUrl}/screening-cases`;
+  getScreeningCases: any;
 
   constructor(private http: HttpClient) {}
 

@@ -12,7 +12,7 @@ import { CandidatePortalComponent } from './candidate-portal.component';
 
 @NgModule({
   declarations: [
-    CandidateDashboardComponent,
+   // CandidateDashboardComponent,
     DocumentUploadComponent,
     ScreeningProgressComponent,
     NotificationsComponent,

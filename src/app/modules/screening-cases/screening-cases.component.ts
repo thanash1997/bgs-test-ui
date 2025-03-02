@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ScreeningCasesService } from '../services/screening-cases.service'; // Ensure service exists
+import { ScreeningCaseService } from 'src/app/services/screening-case.service';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
 
 interface ScreeningCase {
   id: number;
@@ -21,18 +22,21 @@ interface ScreeningCase {
 export class ScreeningCasesComponent implements OnInit {
   screeningCases: ScreeningCase[] = [];
 
-  constructor(private screeningCasesService: ScreeningCasesService, private router: Router) {}
+  constructor(
+    private screeningCaseService: ScreeningCaseService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.loadScreeningCases();
   }
 
   loadScreeningCases(): void {
-    this.screeningCasesService.getScreeningCases().subscribe(
+    this.screeningCaseService.getScreeningCases().subscribe(
       (data: ScreeningCase[]) => {
         this.screeningCases = data;
       },
-      (error) => {
+      (error: any) => {
         console.error('Error fetching screening cases:', error);
       }
     );

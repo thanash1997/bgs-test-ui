@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CandidatePortalService } from 'src/app/modules/candidate-portal/services/candidate-portal.service';
+import { CandidatePortalRoutingModule } from './candidate-portal-routing.module';
 
 @Component({
   selector: 'app-candidate-portal',
@@ -7,6 +8,7 @@ import { CandidatePortalService } from 'src/app/modules/candidate-portal/service
   styleUrls: ['./candidate-portal.component.css']
 })
 export class CandidatePortalComponent implements OnInit {
+  candidateId: number = 1;
   candidateData: any;
 
   constructor(private candidateService: CandidatePortalService) {}
@@ -16,7 +18,7 @@ export class CandidatePortalComponent implements OnInit {
   }
 
   loadCandidateData(): void {
-    this.candidateService.getCandidateInfo().subscribe(
+    this.candidateService.getCandidateInfo(this.candidateId).subscribe(
       (data) => { this.candidateData = data; },
       (error) => { console.error('Error fetching candidate data:', error); }
     );

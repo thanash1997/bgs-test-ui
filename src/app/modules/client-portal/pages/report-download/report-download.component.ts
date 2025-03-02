@@ -28,7 +28,7 @@ export class ReportDownloadComponent implements OnInit {
   loadReports(): void {
     this.clientService.getClientProfile(this.clientId).subscribe(
       (data) => {
-        this.reports = data.screeningCases.filter((s: any) => s.report_file);
+        this.reports = data?.screeningCases?.filter((s: any) => s.report_file) || [];
         this.loading = false;
       },
       (error) => {

@@ -1,21 +1,29 @@
-export const clientDashboardHtml = `
 <div class="container">
-  <h2>Client Dashboard</h2>
+  <h2>Request Screening</h2>
+  
+  <div *ngIf="errorMessage" class="alert alert-danger">{{ errorMessage }}</div>
+  <div *ngIf="successMessage" class="alert alert-success">{{ successMessage }}</div>
 
-  <div *ngIf="loading">Loading...</div>
-  <div *ngIf="errorMessage">{{ errorMessage }}</div>
+  <form [formGroup]="requestForm" (ngSubmit)="submitRequest()">
+    <div>
+      <label for="candidate_id">Candidate ID:</label>
+      <input id="candidate_id" formControlName="candidate_id" required />
+    </div>
 
-  <div *ngIf="!loading && !errorMessage">
-    <h3>Welcome, {{ client.name }}</h3>
-    <p>Email: {{ client.email }}</p>
-    <p>Phone: {{ client.phone }}</p>
+    <div>
+      <label for="status">Status:</label>
+      <select id="status" formControlName="status">
+        <option value="pending">Pending</option>
+        <option value="approved">Approved</option>
+        <option value="rejected">Rejected</option>
+      </select>
+    </div>
 
-    <h4>Screening Cases</h4>
-    <ul>
-      <li *ngFor="let caseItem of client.screeningCases">
-        Case ID: {{ caseItem.id }} - Status: {{ caseItem.status }}
-      </li>
-    </ul>
-  </div>
+    <div>
+      <label for="notes">Notes:</label>
+      <textarea id="notes" formControlName="notes"></textarea>
+    </div>
+
+    
+  </form>
 </div>
-`;

@@ -13,7 +13,7 @@ interface Report {
 
 @Injectable({ providedIn: 'root' })
 export class ReportService {
-  private apiUrl = 'http://localhost:8000/api/reports';
+  private apiUrl = 'http://api.bees.asia/api/reports';
 
   constructor(private http: HttpClient) {}
 

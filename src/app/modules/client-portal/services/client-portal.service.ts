@@ -1,67 +1,70 @@
-<?php
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
-namespace App\Http\Controllers;
-
-use Illuminate\Http\Request;
-use App\Models\Client;
-use App\Models\ScreeningCase;
-use Illuminate\Http\JsonResponse;
-
-class ClientPortalController extends Controller
-{
-    // Get client details and their screening cases
-    public function show($id): JsonResponse
-    {
-        $client = Client::with('screeningCases')->find($id);
-        if (!$client) {
-            return response()->json(['message' => 'Client not found'], 404);
-        }
-        return response()->json($client);
-    }
-
-    // Request a new screening case
-    public function requestScreening(Request $request, $id): JsonResponse
-    {
-        $request->validate([
-            'candidate_id' => 'required|exists:candidates,id',
-            'status' => 'required|string',
-            'notes' => 'nullable|string'
-        ]);
-
-        $client = Client::find($id);
-        if (!$client) {
-            return response()->json(['message' => 'Client not found'], 404);
-        }
-
-        $screeningCase = ScreeningCase::create([
-            'candidate_id' => $request->candidate_id,
-            'client_id' => $id,
-            'status' => $request->status,
-            'notes' => $request->notes,
-        ]);
-
-        return response()->json($screeningCase, 201);
-    }
-
-    // Get screening progress
-    public function getScreeningProgress($id): JsonResponse
-    {
-        $client = Client::with('screeningCases')->find($id);
-        if (!$client) {
-            return response()->json(['message' => 'Client not found'], 404);
-        }
-
-        return response()->json(['progress' => $client->screeningCases]);
-    }
-
-    // Download screening report
-    public function downloadReport($id, $screeningId)
-    {
-        $screeningCase = ScreeningCase::find($screeningId);
-        if (!$screeningCase || $screeningCase->client_id !== $id) {
-            return response()->json(['message' => 'Report not available'], 404);
-        }
-
-        return response()->download(storage_path('app/' . $screeningCase->report_file));
-    }
+interface ClientProfile {
+  id: number;
+  name: string;
+  email: string;
+  phone: string;
+  screeningCases?: any[];
 }
+
+interface ScreeningRequest {
+  candidate_id: number;
+  status: string;
+  notes?: string;
+}
+
+interface ClientRequest {
+  id: number;
+  name: string;
+  email: string;
+  request_type: string;
+  status: string;
+}
+
+@Injectable({ providedIn: 'root' })
+export class ClientPortalService {
+  private apiUrl = 'http://api.bees.asia/api/client-portal';
+
+  constructor(private http: HttpClient) {}
+
+  // ✅ Fetch client profile details
+  getClientProfile(id: number): Observable<ClientProfile> {
+    return this.http.get<ClientProfile>(`${this.apiUrl}/${id}`);
+  }
+
+  // ✅ Submit a new screening request
+  requestScreening(id: number, screeningRequest: ScreeningRequest): Observable<any> {
+    return this.http.post(`${this.apiUrl}/${id}/request-screening`, screeningRequest);
+  }
+
+  // ✅ Get screening progress for a client
+  getScreeningProgress(id: number): Observable<any> {
+    return this.http.get(`${this.apiUrl}/${id}/screening-progress`);
+  }
+
+  // ✅ Download report for a specific screening case
+  downloadReport(id: number, screeningId: number): Observable<Blob> {
+    return this.http.get(`${this.apiUrl}/${id}/download-report/${screeningId}`, { responseType: 'blob' });
+  }
+
+  // ✅ Fetch all client requests (ADDED)
+  getClientRequests(): Observable<ClientRequest[]> {
+    return this.http.get<ClientRequest[]>(`${this.apiUrl}`);
+  }
+
+  // ✅ Approve a client request (ADDED)
+  approveRequest(id: number): Observable<any> {
+    return this.http.post(`${this.apiUrl}/${id}/approve`, {});
+  }
+
+  // ✅ Reject a client request (ADDED)
+  rejectRequest(id: number): Observable<any> {
+    return this.http.post(`${this.apiUrl}/${id}/reject`, {});
+  }
+
+  
+}
+
